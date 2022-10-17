@@ -1,16 +1,19 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-
-namespace user
+namespace first
 {
-    int x= 12;
+	int x=15;
+	int val(){return x;}
 }
-
-int main()
+namespace second
 {
-    int x=20;
-    cout<<"value of x inside main() function: "<<x<<endl;  // 'endl' changes line
-    cout<<"value of x inside user namespace: "<<user::x; // :: is scope resolution operator
-
-    return 0;
+	int x=5;
+	int val(){return x;}
+}
+main()
+{
+	using namespace first;
+	cout<<"X from first:"<<x<<" Val from first:"<<val()<<endl;
+	cout<<endl<<"X from second:"<<second::x<<" Val from second:"<<second::val()<<endl;
+	return 0;
 }
