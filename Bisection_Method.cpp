@@ -1,3 +1,5 @@
+//Finding the root of a function using Bisection method
+
 #include<iostream>
 #include<iomanip>
 #include<math.h>
