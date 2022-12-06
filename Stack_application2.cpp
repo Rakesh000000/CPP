@@ -1,14 +1,14 @@
-// WAP to show the push pop and display application of stack using top varying method
+// WAP to show the push pop and display application of stack using bottom varying method
 #include<iostream>
 #define MAXSIZE 5
 using namespace std;
 
 class Stack{
-    private: 
-    int top, s[MAXSIZE];
+    private:
+    int bos, s[MAXSIZE];
 
     public:
-    Stack(){ top = -1;}
+    Stack(){bos=0;}
 
     void push();
     void pop();
@@ -17,27 +17,30 @@ class Stack{
 
 void Stack::push(){
     int n;
-    if(top == MAXSIZE-1)
+    if(bos==MAXSIZE)
     cout<<"Stack is full"<<endl;
 
     else{
-        cout<<"Enter value to push: "; cin>>n;
-        s[top+1] = n;
-        top++;
+        cout<<"Value to push: ";cin>>n;
+        s[bos]=n;
+        bos++;
     }
 }
 
 void Stack::pop(){
-    if(top==-1)
+    if(bos==0)
     cout<<"Stack is empty"<<endl;
     else{
-        cout<<s[top]<<endl;
-        top--;
+        cout<<s[0]<<endl;
+        bos--;
+        for(int i=0;i<bos;i++){
+            s[i]=s[i+1];
+        }
     }
 }
 
 void Stack::display(){
-    for (int i=0; i<=top; i++){
+    for(int i=bos-1; i>0 ;i--){
         cout<<s[i]<<" ";
     }
     cout<<endl;
@@ -67,8 +70,8 @@ int main(){
             exit(0);
 
             default:
-            cout<<"Invalid Input"<<endl;
+            cout<<"Invalid choice"<<endl;
         }
     }
-        return 0; 
+    return 0;
 }
