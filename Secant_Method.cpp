@@ -12,7 +12,7 @@ int main(){
         x3 = ((x1*f(x2))-x2*(f(x1)))/(f(x2)-f(x1));
         x1=x2;
         x2=x3;
-    }while (fabs((x2-x1)/x2)<e);
+    }while (fabs((x2-x1)/x2)>e);
 
     cout<<"The root is :"<<x3;
     return 0;
