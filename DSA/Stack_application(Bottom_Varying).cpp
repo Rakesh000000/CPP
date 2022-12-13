@@ -40,7 +40,7 @@ void Stack::pop(){
 }
 
 void Stack::display(){
-    for(int i=bos-1; i>0 ;i--){
+    for(int i=bos-1; i>=0 ;i--){
         cout<<s[i]<<" ";
     }
     cout<<endl;
