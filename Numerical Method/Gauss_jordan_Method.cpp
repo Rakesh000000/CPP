@@ -25,7 +25,7 @@ int main(){
 				
 				if(i != k){
 					for(int j=0; j<n+1; j++){
-	                    mat[i][j]= mat[i][j]-mat[k][j]*fact;
+	                    mat[i][j]= mat[i][j]-fact*mat[k][j];
 	                }
             	}
         	}
