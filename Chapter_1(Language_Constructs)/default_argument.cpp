@@ -1,9 +1,11 @@
 #include<iostream>
 using namespace std;
 
+int divide(int a, int b=2);
+
 int main()
 {
-	int divide(int a, int b=2);
+	
 	cout<<divide(4,2)<<endl;
 	cout<<divide(8);
 	return 0;
