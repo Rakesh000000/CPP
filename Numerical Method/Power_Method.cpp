@@ -1,3 +1,5 @@
+/*Finding the eigen value and eigen vector using power method. This is an iterative method so
+we need initial guess*/
 #include<iostream>
 #include<math.h>
 #define e 0.001
@@ -9,13 +11,13 @@ int main(){
     
     cout<<"Enter order of matrix: ";cin>>n;
     cout<<"Enter elements of matrix: "<<endl;
-    for(int i=1; i<=n; i++){
+    for(int i=1; i<=n; i++){        //Reading 3*3 matrix 
         for(int j=1; j<=n; j++){
             cout<<"A"<<i<<j<<":";cin>>mat[i][j];
         }
     }
     cout<<"Enter initial guess:"<<endl;
-    for(int i=1; i<=n; i++){
+    for(int i=1; i<=n; i++){        //Reading initial guess
         cout<<"X"<<i<<":"; cin>>x[i];
     }
    
