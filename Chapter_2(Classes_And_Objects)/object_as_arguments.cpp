@@ -19,6 +19,7 @@ class Time{
 		}
 		void sum(Time,Time);
 };
+
 void Time::sum(Time t1,Time t2){
 	int premin,prehr;
 	premin=t1.min+t2.min;
