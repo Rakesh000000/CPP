@@ -43,7 +43,7 @@ void List::Display(){
     Node *ptr;
     ptr = head;
     while(ptr != NULL){
-        cout<<ptr->info;
+        cout<<ptr->info<<" ";
         ptr = ptr->link;
     }
     cout<<endl;

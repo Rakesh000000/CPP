@@ -20,7 +20,7 @@ class List{
 
 void List::Insert_End(){
     int dataIn;
-    newnode = (Node *)malloc(sizeof(Node));
+	newnode = new Node; // OR newnode = (Node *)malloc(sizeof(Node));
     
     if(newnode == NULL)
     cout<<"Memory full"<<endl;
@@ -71,7 +71,7 @@ int main(){
     int ch;
     cout<<"List Operation:\n1.Insert_End \n2.Delete_End \n3.Display \n4.Exit"<<endl;
     while(1){
-        cout<<"Choice";cin>>ch;
+        cout<<"Choice: ";cin>>ch;
         switch(ch){
             case 1:
             L.Insert_End();
